@@ -33,13 +33,15 @@ public class Main {
                 System.out.println("Ingrese una opcion: ");
                 switch (opcion = teclado.nextInt()) {
                     case 1:
-                        System.out.println("Su saldo actual: "+cuentaActual.getBalance());
+                        System.out.println("Su saldo actual: " + cuentaActual.getBalance());
                         break;
                     case 2:
-                        System.out.println("Ingrese cuanto va a retirar: "+ cuentaActual.withdraw(teclado.nextDouble()));
+                        System.out.println("Ingrese cuanto va a retirar: ");
+                        cuentaActual.withdraw(teclado.nextDouble());
                         break;
                     case 3:
-                        System.out.println("Ingrese cuanto va a depositar: "+ cuentaActual.deposit(teclado.nextDouble()));
+                        System.out.println("Ingrese cuanto va a depositar: ");
+                        cuentaActual.deposit(teclado.nextDouble());
                         break;
                     case 4:
                         System.out.println("Saliendo del menu...");
