@@ -10,12 +10,13 @@ public class Cuenta {
     //constructores
 
     public Cuenta() {
+        this.dateCreated= new Date();
     }
 
-    public Cuenta(int id, double balance, double annualInterestRate) {
+    public Cuenta(int id, double balance) {
         this.id = id;
         this.balance = balance;
-        this.annualInterestRate = annualInterestRate;
+        this.dateCreated= new Date();
     }
 
     //get y set
@@ -53,22 +54,22 @@ public class Cuenta {
 
     //otros metodos
     public double getMonthlyInterestRate() {
-        return (annualInterestRate/100) / 12; //checar la division
+        return (this.annualInterestRate/100) / 12; //checar la division
     }
 
     public double withdraw(double amount) {
-        balance = balance - amount;
+        this.balance-= amount;
 
         return balance; //checar esto
     }
 
     public double getMonthlyInterest(){
-        return balance * getMonthlyInterestRate();
+        return this.balance * getMonthlyInterestRate();
 
     }
 
     public double deposit(double amount) {
-        balance = balance + amount;
+        this.balance+=amount;
 
         return balance;
     }
