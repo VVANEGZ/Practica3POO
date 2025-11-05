@@ -54,13 +54,13 @@ public class Cuenta {
 
     //otros metodos
     public double getMonthlyInterestRate() {
-        return (this.annualInterestRate/100) / 12; //checar la division
+        return (this.annualInterestRate/100) / 12; 
     }
 
     public double withdraw(double amount) {
         this.balance-= amount;
 
-        return balance; //checar esto
+        return balance;
     }
 
     public double getMonthlyInterest(){
